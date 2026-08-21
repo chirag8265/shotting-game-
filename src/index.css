@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Rajdhani', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    letter-spacing: 0.5px;
+    background-color: #0B0F1A;
+    color: #ffffff;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: 'Orbitron', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .font-mono-tech {
+    font-family: 'Chakra Petch', monospace;
+  }
+}
+
+/* Frosted Glass Theme Utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-panel-deep {
+  background: rgba(11, 15, 26, 0.75);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-panel-subtle {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-glow-red {
+  box-shadow: 0 0 25px rgba(239, 68, 68, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.glass-glow-blue {
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Radar scan effect */
+@keyframes radar-sweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-radar {
+  animation: radar-sweep 4s linear infinite;
+}
+
+/* Pulse red border for damage */
+@keyframes damage-pulse {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 0.8; }
+}
+
+.damage-vignette {
+  background: radial-gradient(circle, transparent 40%, rgba(239, 68, 68, 0.4) 90%, rgba(220, 38, 38, 0.8) 100%);
+}
+
+.storm-vignette {
+  background: radial-gradient(circle, transparent 50%, rgba(59, 130, 246, 0.3) 85%, rgba(37, 99, 235, 0.6) 100%);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(11, 15, 26, 0.8);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
